@@ -49,26 +49,24 @@
             (casualt-mock #'symbol-overlay-isearch-literally))
 
     (let ((test-vectors
-           '(
-             (:binding "w" :command symbol-overlay-save-symbol)
+           '((:binding "w" :command symbol-overlay-save-symbol)
              (:binding "r" :command symbol-overlay-rename)
              (:binding "q" :command symbol-overlay-query-replace)
-             (:binding "d" :command symbol-overlay-jump-to-definition)
+
+             (:binding "i" :command symbol-overlay-put)
+             (:binding "t" :command symbol-overlay-toggle-in-scope)
+             (:binding "k" :command symbol-overlay-remove-all)
+             (:binding "s" :command symbol-overlay-isearch-literally)
 
              (:binding "p" :command symbol-overlay-jump-prev)
              (:binding "n" :command symbol-overlay-jump-next)
              (:binding "<" :command symbol-overlay-jump-first)
              (:binding ">" :command symbol-overlay-jump-last)
-             (:binding "ð" :command symbol-overlay-switch-backward)
-             (:binding "î" :command symbol-overlay-switch-forward)
-             (:binding "e" :command symbol-overlay-echo-mark)
+             (:binding "M-p" :command symbol-overlay-switch-backward)
+             (:binding "M-n" :command symbol-overlay-switch-forward)
 
-             (:binding "t" :command symbol-overlay-toggle-in-scope)
-             (:binding "i" :command symbol-overlay-put)
-             (:binding "k" :command symbol-overlay-remove-all)
-
-             (:binding "s" :command symbol-overlay-isearch-literally)
-             )))
+             (:binding "d" :command symbol-overlay-jump-to-definition)
+             (:binding "e" :command symbol-overlay-echo-mark))))
 
       (casualt-suffix-testcase-runner test-vectors
                                       #'casual-symbol-overlay-tmenu
