@@ -5,7 +5,7 @@
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
-;; Version: 1.0.0
+;; Version: 1.0.1
 ;; Package-Requires: ((emacs "29.1") (casual-lib "1.1.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -47,6 +47,8 @@
 (require 'casual-lib)
 (require 'casual-symbol-overlay-utils)
 (require 'casual-symbol-overlay-settings)
+
+(defvar symbol-overlay-scope) ;; added to suppress lint warning
 
 ;;;###autoload (autoload 'casual-symbol-overlay-tmenu "casual-symbol-overlay" nil t)
 (transient-define-prefix casual-symbol-overlay-tmenu ()
