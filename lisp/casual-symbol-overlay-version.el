@@ -22,7 +22,7 @@
 
 ;;; Code:
 
-(defconst casual-symbol-overlay-version "0.1.0"
+(defconst casual-symbol-overlay-version "1.0.0"
   "Casual Symbol Overlay Version.")
 
 (defun casual-symbol-overlay-version ()
