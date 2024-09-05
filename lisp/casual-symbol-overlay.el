@@ -48,6 +48,8 @@
 (require 'casual-symbol-overlay-utils)
 (require 'casual-symbol-overlay-settings)
 
+(defvar symbol-overlay-scope) ;; added to suppress lint warning
+
 ;;;###autoload (autoload 'casual-symbol-overlay-tmenu "casual-symbol-overlay" nil t)
 (transient-define-prefix casual-symbol-overlay-tmenu ()
   ["Symbol Overlay"
