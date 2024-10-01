@@ -36,11 +36,11 @@ CASUAL_LIB_DIR=$(CASUAL_BASE_DIR)/casual-lib
 CASUAL_LIB_LISP_DIR=$(CASUAL_LIB_DIR)/lisp
 CASUAL_LIB_TEST_INCLUDES=$(CASUAL_LIB_DIR)/tests/casual-lib-test-utils.el
 EMACS_ELPA_DIR=$(HOME)/.config/emacs/elpa
-PACKAGE_PATHS=						\
--L $(EMACS_ELPA_DIR)/compat-30.0.0.0			\
--L $(EMACS_ELPA_DIR)/seq-2.24				\
--L $(EMACS_ELPA_DIR)/transient-current			\
--L $(EMACS_ELPA_DIR)/symbol-overlay-20240311.1207	\
+PACKAGE_PATHS=					\
+-L $(EMACS_ELPA_DIR)/compat-30.0.0.0		\
+-L $(EMACS_ELPA_DIR)/seq-2.24			\
+-L $(EMACS_ELPA_DIR)/transient-current		\
+-L $(EMACS_ELPA_DIR)/symbol-overlay-current	\
 -L $(CASUAL_LIB_LISP_DIR)
 
 .PHONY: tests compile regression
