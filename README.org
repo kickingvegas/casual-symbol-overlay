@@ -5,7 +5,7 @@ An opinionated [[https://github.com/magit/transient][Transient]]-based user inte
 
 * Motivation
 
-The *Symbol Overlay* (~symbol-overlay~) package has many useful functions and bindings that if not used frequently are easy to forget. Menus are a user interface (UI) affordance that offer users discoverability and recall that can lower its learning curve. While menus are commonly associated with mouse-driven UI, the inclusion of Transient in Emacs core allows for a menu UI that is keyboard-driven. Casual Symbol Overlay endeavors to offer this as many Emacs users prefer keyboard-driven workflows.
+The *Symbol Overlay* (~symbol-overlay~) package has many useful functions and bindings that if not used frequently are easy to forget. Menus are a user interface (UI) affordance that offer users discoverability and recognition that can lower its learning curve. While menus are commonly associated with mouse-driven UI, the inclusion of Transient in Emacs core allows for a menu UI that is keyboard-driven. Casual Symbol Overlay endeavors to offer this as many Emacs users prefer keyboard-driven workflows.
 
 ** Goals
 - To provide a keyboard-driven menu UI for editing symbol-overlay.
