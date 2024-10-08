@@ -119,6 +119,7 @@
 
   [:class transient-row
    (casual-lib-quit-one)
+   ("RET" "Done" transient-quit-all)
    ("," "Settings›" casual-symbol-overlay-settings-tmenu)
    (casual-lib-quit-all)])
 
