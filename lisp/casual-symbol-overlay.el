@@ -5,7 +5,7 @@
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
-;; Version: 1.0.2
+;; Version: 1.0.3-rc.1
 ;; Package-Requires: ((emacs "29.1") (casual-lib "1.1.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -119,6 +119,7 @@
 
   [:class transient-row
    (casual-lib-quit-one)
+   ("RET" "Done" transient-quit-all)
    ("," "Settings›" casual-symbol-overlay-settings-tmenu)
    (casual-lib-quit-all)])
 
