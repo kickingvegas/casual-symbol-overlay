@@ -66,7 +66,8 @@
              (:binding "M-n" :command symbol-overlay-switch-forward)
 
              (:binding "d" :command symbol-overlay-jump-to-definition)
-             (:binding "e" :command symbol-overlay-echo-mark))))
+             (:binding "e" :command symbol-overlay-echo-mark)
+             (:binding "RET" :command transient-quit-all))))
 
       (casualt-suffix-testcase-runner test-vectors
                                       #'casual-symbol-overlay-tmenu
