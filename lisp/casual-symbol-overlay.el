@@ -6,7 +6,7 @@
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
 ;; Version: 1.1.1-rc.1
-;; Package-Requires: ((emacs "29.1") (casual-lib "2.0.0") (symbol-overlay "4.2"))
+;; Package-Requires: ((emacs "29.1") (casual "2.0.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
