@@ -1,6 +1,6 @@
 ;;; casual-symbol-overlay.el --- Transient UI for Symbol Overlay -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2024  Charles Choi
+;; Copyright (C) 2024-2026  Charles Choi
 
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
@@ -42,6 +42,21 @@
 (require 'casual-symbol-overlay-settings)
 
 (defvar symbol-overlay-scope) ;; added to suppress lint warning
+
+
+;;;###autoload (autoload 'casual-symbol-overlay-init "casual-symbol-overlay" nil t)
+(defun casual-symbol-overlay-init ()
+  "Initialize and configure Casual Symbol Overlay."
+  (interactive)
+  (add-hook 'symbol-overlay-mode-hook #'casual-symbol-overlay-setup))
+
+(defun casual-symbol-overlay-setup ()
+  "Setup `symbol-overlay-mode' for Casual.
+
+To see what keybindings are set by this function, press ‘s’ to view its
+source."
+  (keymap-set symbol-overlay-map casual-keybinding-primary #'casual-symbol-overlay-tmenu))
+
 
 ;;;###autoload (autoload 'casual-symbol-overlay-tmenu "casual-symbol-overlay" nil t)
 (transient-define-prefix casual-symbol-overlay-tmenu ()
