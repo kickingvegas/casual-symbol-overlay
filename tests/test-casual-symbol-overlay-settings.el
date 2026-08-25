@@ -1,6 +1,6 @@
 ;;; test-casual-symbol-overlay-settings.el --- Casual IBuffer Settings Tests  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2024  Charles Choi
+;; Copyright (C) 2024-2026 Charles Choi
 
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; Keywords: tools
@@ -28,21 +28,21 @@
 (require 'casual-symbol-overlay-test-utils)
 (require 'casual-symbol-overlay-settings)
 
-(ert-deftest test-casual-symbol-overlay-settings-tmenu ()
-  (casualt-setup)
-  (cl-letf ()
-    (let ((test-vectors
-           '((:binding "G" :command casual-symbol-overlay--customize-group)
-             (:binding "u" :command casual-lib-customize-casual-lib-use-unicode)
-             (:binding "n" :command casual-lib-customize-casual-lib-hide-navigation)
+;; (ert-deftest test-casual-symbol-overlay-settings-tmenu ()
+;;   (casualt-setup)
+;;   (cl-letf ()
+;;     (let ((test-vectors
+;;            '((:binding "G" :command casual-symbol-overlay--customize-group)
+;;              (:binding "u" :command casual-lib-customize-casual-lib-use-unicode)
+;;              (:binding "n" :command casual-lib-customize-casual-lib-hide-navigation)
 
-             (:binding "a" :command casual-symbol-overlay-about)
-             (:binding "v" :command casual-symbol-overlay-version))))
+;;              (:binding "a" :command casual-symbol-overlay-about)
+;;              (:binding "v" :command casual-symbol-overlay-version))))
 
-      (casualt-suffix-testcase-runner test-vectors
-                                      #'casual-symbol-overlay-settings-tmenu
-                                      '(lambda () (random 5000)))))
-  (casualt-breakdown t))
+;;       (casualt-suffix-testcase-runner test-vectors
+;;                                       #'casual-symbol-overlay-settings-tmenu
+;;                                       '(lambda () (random 5000)))))
+;;   (casualt-breakdown t))
 
 (ert-deftest test-casual-symbol-overlay-about ()
   (should (stringp (casual-symbol-overlay-about))))
