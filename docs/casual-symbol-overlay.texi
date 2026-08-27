@@ -14,13 +14,13 @@ Copyright © 2026 Charles Y@. Choi
 
 @dircategory Emacs misc features
 @direntry
-* casual-symbol-overlay: (casual-symbol-overlay). Casual Symbol Overlay is a.
+* Casual Symbol Overlay: (casual-symbol-overlay). A Transient user interface for Symbol Overlay.
 @end direntry
 
 @finalout
 @titlepage
 @title Casual Symbol Overlay User Guide
-@subtitle for version 2.0.3-rc.1
+@subtitle for version 2.0.1-rc.1
 @author Charles Y@. Choi (@email{kickingvegas@@gmail.com})
 @page
 @vskip 0pt plus 1filll
@@ -33,11 +33,17 @@ Copyright © 2026 Charles Y@. Choi
 @node Top
 @top Casual Symbol Overlay User Guide
 
-Version: 2.0.3-rc.1
+Version: 2.0.1-rc.1
 
 Copyright © 2026 @w{Charles Y. Choi}
 
-Hey talk about Casual Symbol Overlay here.
+Casual Symbol Overlay is an opinionated Transient (@ref{Top,transient#Top,,transient,}) user interface for @uref{https://github.com/wolray/symbol-overlay, Symbol Overlay}@comma{} a package to highlight symbols with overlays while providing a keymap for various operations on highlighted symbols.
+
+@image{images/casual-symbol-overlay-screenshot,,,,png}
+
+Casual Symbol Overlay is designed to bring discoverability to many Symbol Overlay commands for an enhanced navigation and editing experience.
+
+Casual Symbol Overlay is an extension package to Casual (@ref{Top,,,casual,})@comma{} which is included as a dependency.
 
 
 If you enjoy using Casual Symbol Overlay@comma{} please buy me a coffee to help support its development and maintenance.
@@ -52,13 +58,24 @@ If you enjoy using Casual Symbol Overlay@comma{} please buy me a coffee to help 
 * Features::
 * Requirements::
 * Install::
-* Commands::
 * Feedback & Discussion::
 * Sponsorship::
 * About::
 * Acknowledgments::
 * Main Index::
 * Variable Index::
+
+@detailmenu
+--- The Detailed Node Listing ---
+
+Install
+
+* Setup with Casual Suite::
+* Setup with Casual only::
+* Setup Casual Symbol Overlay only::
+* Manual Install::
+
+@end detailmenu
 @end menu
 
 @node Features
@@ -73,30 +90,87 @@ TBD
 
 @cindex Requirements
 
-TBD
+Casual Symbol Overlay requires @uref{https://github.com/magit/transient, Transient} 0.9+. Versions of GNU Emacs 30.1 or greater will satisfy this requirement with its built-in version of Transient.
 
-@strong{now-playing.el} requires GNU Emacs 30.1+ running on macOS 13 (Ventura) or greater.  NS support is recommended for optimal performance.
+The following packages are also required but will be installed as dependencies if not present.
+
+@itemize
+@item
+@uref{https://github.com/kickingvegas/casual, Casual} ≥ 3.0.0
+@item
+@uref{https://github.com/wolray/symbol-overlay, Symbol Overlay} ≥ 4.2    
+@end itemize
+
+Casual Symbol Overlay has been verified with the following configuration.
+
+@itemize
+@item
+GNU Emacs 31.1 (macOS 15.7@comma{} Ubuntu Linux 22.04.5 LTS)
+@item
+Symbol Overlay 4.3
+@end itemize
 
 @node Install
 @chapter Install
 
 @cindex Install
 
-TBD
+Casual Symbol Overlay is intended to be installed via @code{package-install} from MELPA@comma{} either directly or as a dependency to @uref{https://github.com/kickingvegas/casual-suite, Casual Suite}. After this installation@comma{} Casual Symbol Overlay can be setup in a number of ways@comma{} as enumerated in the sub-sections below.
 
-@node Commands
-@chapter Commands
+@menu
+* Setup with Casual Suite::
+* Setup with Casual only::
+* Setup Casual Symbol Overlay only::
+* Manual Install::
+@end menu
 
-@cindex Commands
+@node Setup with Casual Suite
+@section Setup with Casual Suite
+
+If you have Casual Symbol Overlay installed as a dependency to @uref{https://github.com/kickingvegas/casual-suite, Casual Suite}@comma{} then Casual Suite will automatically setup Casual Symbol Overlay. Refer to the Casual Suite @uref{https://github.com/kickingvegas/casual-suite#install, Install section} for more detail.
+
+Note that this will only work if Casual Symbol Overlay is installed via @code{package-install}.
+
+@node Setup with Casual only
+@section Setup with Casual only
+
+Casual Symbol Overlay includes the base Casual package as a dependency. Casual has the command @code{casual-init} which will setup all modules within it as specified in the hook variable @code{casual-init-hook}. Casual Symbol Overlay can be included in this hook with the following Elisp added to your Emacs initialization file:
+
+@lisp
+(add-hook 'casual-init-hook #'casual-symbol-overlay-init)
+@end lisp
+
+Note that this will only work if Casual Symbol Overlay is installed via @code{package-install}.
+
+@node Setup Casual Symbol Overlay only
+@section Setup Casual Symbol Overlay only
+
+If only setup for Casual Symbol Overlay is desired@comma{} then directly run the command @code{casual-avy-init}@comma{} either manually with @code{extended-execute-command} (@code{M-x}) or by adding it to your Emacs initialization file.
+
+@lisp
+(casual-symbol-overlay-init)
+@end lisp
+
+Note that this will only work if Casual Symbol Overlay is installed via @code{package-install}.
+
+@node Manual Install
+@section Manual Install
+
+Casual Symbol Overlay is installed outside of @code{package-install}@comma{} then add the following lines to your Emacs initialization file.
+
+@lisp
+(require 'casual-symbol-overlay) ;; optional if using autoloaded menu
+(keymap-set symbol-overlay-map casual-keybinding-primary #'casual-symbol-overlay-tmenu)
+@end lisp
 
 @node Feedback & Discussion
 @chapter Feedback & Discussion
 
 @cindex Feedback
-Please report any feedback about @strong{now-playing.el} to the @uref{https://github.com/kickingvegas/now-playing/issues, issue tracker on GitHub}.
+Please report any feedback about @strong{Casual Symbol Overlay} to the @uref{https://github.com/kickingvegas/casual-symbol-overlay/issues, issue tracker on GitHub}.
 
 @cindex Discussion
-To participate in general discussion about using @strong{now-playing.el}@comma{} please join the @uref{https://github.com/kickingvegas/now-playing/discussions, discussion group}.
+To participate in general discussion about using @strong{Casual Symbol Overlay}@comma{} please join the @uref{https://github.com/kickingvegas/casual-symbol-overlay/discussions, discussion group}.
 
 @node Sponsorship
 @chapter Sponsorship
