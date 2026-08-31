@@ -5,7 +5,7 @@
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
-;; Version: 3.0.0-rc.1
+;; Version: 3.0.0-rc.2
 ;; Package-Requires: ((emacs "30.1") (casual "3.0.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
