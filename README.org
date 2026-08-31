@@ -46,7 +46,7 @@ Note that this will only work if Casual Symbol Overlay is installed via ~package
 
 ** Setup Casual Symbol Overlay only
 
-If only setup for Casual Symbol Overlay is desired, then directly run the command ~casual-avy-init~, either manually with ~extended-execute-command~ (~M-x~) or by adding it to your Emacs initialization file.
+If only setup for Casual Symbol Overlay is desired, then directly run the command ~casual-symbol-overlay-init~, either manually with ~extended-execute-command~ (~M-x~) or by adding it to your Emacs initialization file.
 
 #+begin_src elisp :lexical no
   (casual-symbol-overlay-init)
