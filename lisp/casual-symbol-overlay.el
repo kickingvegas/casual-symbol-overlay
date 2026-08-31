@@ -1,12 +1,12 @@
 ;;; casual-symbol-overlay.el --- Transient UI for Symbol Overlay -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2024  Charles Choi
+;; Copyright (C) 2024-2026  Charles Choi
 
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
-;; Version: 2.0.0
-;; Package-Requires: ((emacs "29.1") (casual "2.0.0") (symbol-overlay "4.2"))
+;; Version: 2.0.1-rc.1
+;; Package-Requires: ((emacs "30.1") (casual "3.0.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -25,15 +25,10 @@
 
 ;; Casual Symbol Overlay is a Transient user interface for Symbol Overlay.
 
-;; INSTALLATION
-;; (require 'casual-symbol-overlay) ; optional if using autoloaded menu
-;; (keymap-set symbol-overlay-map "C-o" #'casual-symbol-overlay-tmenu)
+;; INSTALL
 
-;; If you are using Emacs ≤ 30.0, you will need to update the built-in package
-;; `transient'. By default, `package.el' will not upgrade a built-in package.
-;; Set the customizable variable `package-install-upgrade-built-in' to `t' to
-;; override this. For more details, please refer to the "Install" section on
-;; this project's repository web page.
+;; Refer to “Install” section in the Casual Symbol Overlay User Guide in `info'
+;; for guidance on installation and setup.
 
 ;;; Code:
 (require 'symbol-overlay)
@@ -42,6 +37,21 @@
 (require 'casual-symbol-overlay-settings)
 
 (defvar symbol-overlay-scope) ;; added to suppress lint warning
+
+
+;;;###autoload (autoload 'casual-symbol-overlay-init "casual-symbol-overlay" nil t)
+(defun casual-symbol-overlay-init ()
+  "Initialize and configure Casual Symbol Overlay."
+  (interactive)
+  (add-hook 'symbol-overlay-mode-hook #'casual-symbol-overlay-setup))
+
+(defun casual-symbol-overlay-setup ()
+  "Setup `symbol-overlay-mode' for Casual.
+
+To see what keybindings are set by this function, press ‘s’ to view its
+source."
+  (keymap-set symbol-overlay-map casual-keybinding-primary #'casual-symbol-overlay-tmenu))
+
 
 ;;;###autoload (autoload 'casual-symbol-overlay-tmenu "casual-symbol-overlay" nil t)
 (transient-define-prefix casual-symbol-overlay-tmenu ()
