@@ -6,7 +6,7 @@
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
 ;; Version: 2.0.1-rc.1
-;; Package-Requires: ((emacs "29.1") (casual "2.0.0") (symbol-overlay "4.2"))
+;; Package-Requires: ((emacs "30.1") (casual "3.0.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -25,15 +25,10 @@
 
 ;; Casual Symbol Overlay is a Transient user interface for Symbol Overlay.
 
-;; INSTALLATION
-;; (require 'casual-symbol-overlay) ; optional if using autoloaded menu
-;; (keymap-set symbol-overlay-map "C-o" #'casual-symbol-overlay-tmenu)
+;; INSTALL
 
-;; If you are using Emacs ≤ 30.0, you will need to update the built-in package
-;; `transient'. By default, `package.el' will not upgrade a built-in package.
-;; Set the customizable variable `package-install-upgrade-built-in' to `t' to
-;; override this. For more details, please refer to the "Install" section on
-;; this project's repository web page.
+;; Refer to “Install” section in the Casual Symbol Overlay User Guide in `info'
+;; for guidance on installation and setup.
 
 ;;; Code:
 (require 'symbol-overlay)
