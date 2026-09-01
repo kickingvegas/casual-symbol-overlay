@@ -1,3 +1,5 @@
+[[https://melpa.org/#/casual-symbol-overlay][file:https://melpa.org/packages/casual-symbol-overlay-badge.svg]] [[https://stable.melpa.org/#/casual-symbol-overlay][file:https://stable.melpa.org/packages/casual-symbol-overlay-badge.svg]]
+
 * Casual Symbol Overlay
 
 Casual Symbol Overlay is an opinionated [[https://github.com/magit/transient][Transient]]-based user interface for [[https://github.com/wolray/symbol-overlay][Symbol Overlay]], a package to highlight symbols with overlays while providing a keymap for various operations on highlighted symbols.
