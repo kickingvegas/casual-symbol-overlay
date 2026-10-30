@@ -80,6 +80,7 @@ If you enjoy using Casual Symbol Overlay, consider buying me a coffee to help su
 
 [[https://www.buymeacoffee.com/kickingvegas][file:docs/images/default-yellow.png]]
 
+Please star and share this project to others as well. Thank you!
 
 * Acknowledgments
 
