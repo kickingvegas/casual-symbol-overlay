@@ -43,7 +43,7 @@
 (defun casual-symbol-overlay-init ()
   "Initialize and configure Casual Symbol Overlay."
   (interactive)
-  (add-hook 'symbol-overlay-mode-hook #'casual-symbol-overlay-setup))
+  (casual-symbol-overlay-setup))
 
 (defun casual-symbol-overlay-setup ()
   "Setup `symbol-overlay-mode' for Casual.
