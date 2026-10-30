@@ -5,7 +5,7 @@
 ;; Author: Charles Choi <kickingvegas@gmail.com>
 ;; URL: https://github.com/kickingvegas/casual-symbol-overlay
 ;; Keywords: tools
-;; Version: 3.0.1
+;; Version: 3.0.2-rc.1
 ;; Package-Requires: ((emacs "30.1") (casual "3.0.0") (symbol-overlay "4.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -43,7 +43,7 @@
 (defun casual-symbol-overlay-init ()
   "Initialize and configure Casual Symbol Overlay."
   (interactive)
-  (add-hook 'symbol-overlay-mode-hook #'casual-symbol-overlay-setup))
+  (casual-symbol-overlay-setup))
 
 (defun casual-symbol-overlay-setup ()
   "Setup `symbol-overlay-mode' for Casual.
